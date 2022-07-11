@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	body{
+		background: url(../img/instalaciones.jpg);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	
+	.er{
+		position: absolute;
+		width: 50px;
+		height: 40px;
+		right: 2.5px;
+		top: 1px;
+		padding: 5px;
+		border-radius: 10px;
+		
+	}
+	.table td{
+		border: 1px solid black;
+		width: 200px;
+	}
+	.table1 td{
+		width: 200px;
+		color: #f5efef;
+	}
+	.Vid{
+		width: 400px;
+		height: 500px;
+		padding: 30px;
+	}
+	
+	.er1{
+		position: absolute;
+		width: 50px;
+		height: 40px;
+		right: 2.5px;
+		top: 1px;
+		padding: 5px;
+		border-radius: 10px;
+		
+	}
+	.h2{
+		text-align: right;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding: 10px;
+	}
+	
+	.ventana1{
+		display: none;
+		columns: 2;
+		text-align: center;
+		color: rgb(9, 7, 7);
+		width: 30%;
+		font-size: 18px;
+		position: absolute;
+		left: 30%;
+		opacity: 70%;
+		top: 20%;
+		padding: 33px;
+		min-height: 250px;
+		border-radius: 22px;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);	
+	}
+	.img2{
+		flex-wrap:wrap;		width: 50px;
+		height: 50px;
+	}
+	.img3{
+		width: 130px;
+		height: 50px;
+		right: 20px;
+		opacity: 90%;
+		border-radius: 300px;
+	}
+
+	.ventana{
+		display: none;
+
+		text-align: center;
+		color: rgb(9, 7, 7);
+		width: 40%;
+		height: flex;
+		font-size: 20px;
+		position: absolute;
+		left: 30%;
+		top: 15%;
+		padding: 25px;
+		min-height: 270px;
+		border-radius: 35px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);	
+	}
+	.sal{
+		margin: 0px auto;
+		margin-top: 100px;
+		color: white;
+		font-size: 30px;
+		top: 10px;
+		
+	}
+
+	.ventana3{
+		text-align: center;
+		width: 40%;
+		font-size: 20px;
+		position: absolute;
+		height: flex;
+
+		left: 22%;
+		top: 25%;
+		min-height: 270px;
+		border-radius: 35px;
+	
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+
+
+
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor:pointer;
+		
+		background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+		
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+		
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background:rgb(26, 25, 25);
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+		background-repeat: no-repeat;
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: rgb(180, 175, 175);
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+		background: #2f2e2e;
+		opacity: 10;
+		
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+		
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	.er3{
+		position: ab;
+		width: 50px;
+		height: 40px;
+		top: 1px;
+		right: 2.6px;
+		padding: 5px;
+		
+	}
+	/*Fin de Menù lateral*/
